@@ -1,0 +1,253 @@
+/* Contenedor d toda la pantalla */
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+ .header {
+  width: 100%;
+  text-align: center;
+  padding: 15px 0;
+}
+
+.header-title {
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+/*  login  centrado */
+.main-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex: 1;
+  padding: 20px 0;
+}
+
+/* card del formulario*/
+.content {
+  width: 100%;
+  max-width: 420px;
+  background: rgba(8, 8, 12, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 18px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.85), 0 0 20px rgba(255, 255, 255, 0.03);
+  padding: 35px 30px;
+  position: relative;
+}
+
+.content h2 {
+  font-size: 34px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* Cartelito de success o en construccion */
+.cartelito {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.cartelito-success {
+  background: rgba(46, 204, 113, 0.35);
+  border: 1px solid #2ecc71;
+  color: #eaffea;
+}
+
+.cartelito-construccion {
+  background: rgba(241, 196, 15, 0.35);
+  border: 1px solid #f1c40f;
+  color: #fff9e6;
+}
+
+.btn-cerrar-cartelito {
+  background: transparent;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  padding-left: 10px;
+  opacity: 0.8;
+}
+
+.btn-cerrar-cartelito:hover {
+  opacity: 1;
+}
+
+/*  inputs */
+.content .input-box {
+  position: relative;
+  width: 100%;
+  height: 52px;
+  margin: 24px 0;
+}
+
+.content .input-box input {
+  background: rgba(255, 255, 255, 0.05);
+  width: 100%;
+  height: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 30px;
+  padding: 15px 48px 15px 20px;
+  font-size: 16px;
+  color: #fff;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.content .input-box input:focus {
+  border-color: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 15px;
+}
+
+.input-box i {
+  position: absolute;
+  top: 50%;
+  right: 18px;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: #fff;
+}
+
+/* Recordarme y olvido de contraseña */
+.content .remember {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0 20px 0;
+  font-size: 14px;
+}
+
+.remember label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.remember label input {
+  accent-color: #fff;
+  margin-right: 6px;
+  width: 16px;
+  height: 16px;
+}
+
+.remember a {
+  color: #fff;
+  font-size: 13px;
+  transition: text-decoration 0.2s;
+}
+
+.remember a:hover {
+  text-decoration: underline;
+}
+
+/* Botón principal de login */
+.btnn {
+  display: block;
+  background: #ffffff;
+  color: #0b0c10;
+  width: 100%;
+  border-radius: 30px;
+  font-size: 16px;
+  height: 48px;
+  font-weight: 600;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  margin-bottom: 24px;
+  transition: transform 0.15s ease, background 0.2s ease;
+}
+
+.btnn:hover {
+  background: #f0f0f0;
+  transform: translateY(-2px);
+}
+
+.btnn:active {
+  transform: translateY(0);
+}
+
+/* Botones de redes sociales */
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.button a {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  transition: opacity 0.2s;
+}
+
+.button a i {
+  font-size: 18px;
+  margin-right: 6px;
+}
+
+.button a:hover {
+  opacity: 0.85;
+}
+
+.label-construccion {
+  font-size: 11px;
+  opacity: 0.75;
+  margin-left: 3px;
+  font-style: italic;
+}
+
+.separador {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* Footer */
+.footer {
+  width: 100%;
+  text-align: center;
+  padding: 15px 0 5px 0;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.8);
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.footer p {
+  color: rgba(255, 255, 255, 0.85);
+  letter-spacing: 0.5px;
+}
